@@ -2,19 +2,23 @@
 const {app, BrowserWindow} = require('electron')
 const path = require('path')
 
+
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
 
 function createWindow () {
-  // Create the browser window.
+    // Create the browser window.
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
     webPreferences: {
+      nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
+
+  
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html')
