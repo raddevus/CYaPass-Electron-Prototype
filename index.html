@@ -37,10 +37,16 @@
    <div class="col-sm-6" >
    <h3 class="cyaHeader">2. Draw a pattern</h3>
    <canvas id="mainGrid">You're browser does not support HTML5.</canvas>
-     <div class="input-group">
-       <label class="input-group-addon"><input id="hidePatternCheckBox" type="checkbox" value=""><strong> Hide Pattern</strong></label>
-       <button type="button" class="btn btn-sm btn-outline-primary" onclick="clearButtonClick()">Clear</button>
-     </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <div class="input-group-text">
+            <input type="checkbox" id="hidePatternCheckBox">
+          </div>
+          <span class="form-control input-type-text" ><strong>Hide Pattern</strong></span>
+        </div>
+        
+      <button type="button" class="btn btn-sm btn-outline-primary" onclick="clearButtonClick()">Clear</button>
+    </div>
      <div class="form-group">
        <textarea class="form-control" rows="3" id="passwordText" placeholder="password"></textarea>
      </div>
