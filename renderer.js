@@ -4,7 +4,7 @@
 // cyapass.js
 "use strict";
 let $ = require('jquery');
-
+var modal = require('./node_modules/bootstrap/js/dist/modal');
 window.$ = $;
 
 //let bs = require('bootstrap');
