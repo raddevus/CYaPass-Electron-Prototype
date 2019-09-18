@@ -149,7 +149,7 @@ function drawUserShape(){
 
 function generatePassword(){
     var selectedItemText = $("#SiteListBox option:selected").text();
-    selectedItemText = 'supersite';
+
 	if (selectedItemText === null || selectedItemText === ""){
 		return;
 	}
