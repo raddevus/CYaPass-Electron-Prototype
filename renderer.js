@@ -253,20 +253,20 @@ function initAddDialogControlValues(){
 var localSiteKey;
 function editButtonClick(){
 	
-	// $("#siteKeyErrMsg").text("");
-	// var editItem = $("#SiteListBox option:selected").val();
-	// console.log("editItem : " + editItem);
-	// $("#SiteKeyItem").val(editItem);
+	$("#siteKeyErrMsg").text("");
+	var editItem = $("#SiteListBox option:selected").val();
+	console.log("editItem : " + editItem);
+	$("#SiteKeyItem").val(editItem);
 	
-	// console.log("encodedKey : " + getEncodedKey(editItem));
-	// localSiteKey = getExistingSiteKey(getEncodedKey(editItem));
-	// setAddDialogControlValues(localSiteKey);
-	// isAddKey = false;
-    // $("#AddSiteKeyModal").modal('toggle');
-    var clearTextItemKey = "supersite";
+	console.log("encodedKey : " + getEncodedKey(editItem));
+	localSiteKey = getExistingSiteKey(getEncodedKey(editItem));
+	setAddDialogControlValues(localSiteKey);
+	isAddKey = false;
+    $("#AddSiteKeyModal").modal('toggle');
+    
     var item = new SiteKey(clearTextItemKey);
-	item.HasSpecialChars = true;//$("#addSpecialCharsCheckboxDlg").prop("checked");
-	item.HasUpperCase = true;//$("#addUppercaseCheckboxDlg").prop("checked");
+	item.HasSpecialChars = $("#addSpecialCharsCheckboxDlg").prop("checked");
+	item.HasUpperCase = $("#addUppercaseCheckboxDlg").prop("checked");
 
 	if (item.Key !== null && item.Key !== ""){
 		var localOption = new Option(clearTextItemKey, clearTextItemKey, false, true);
