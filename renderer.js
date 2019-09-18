@@ -263,7 +263,7 @@ function editButtonClick(){
 	setAddDialogControlValues(localSiteKey);
 	isAddKey = false;
     $("#AddSiteKeyModal").modal('toggle');
-    
+    $("#AddSiteKeyLabel").text("Edit Existing Site/Key");
     var item = new SiteKey(clearTextItemKey);
 	item.HasSpecialChars = $("#addSpecialCharsCheckboxDlg").prop("checked");
 	item.HasUpperCase = $("#addUppercaseCheckboxDlg").prop("checked");
@@ -283,6 +283,7 @@ function addButtonClick(){
 	initAddDialogControlValues();
 	isAddKey = true;
 	$("#AddSiteKeyModal").modal('toggle');
+	$("#AddSiteKeyLabel").text("Add New Site/Key");
 }
 
 function addOrEditSiteKey(){
