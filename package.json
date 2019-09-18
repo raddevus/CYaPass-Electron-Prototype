@@ -14,7 +14,7 @@
     "type",
     "again"
   ],
-  "author": "GitHub",
+  "author": "roger deutsch",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^6.0.9"

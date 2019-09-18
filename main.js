@@ -12,6 +12,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    icon:'cyapass.jpg',
     webPreferences: {
       nodeIntegration: true,
       preload: path.join(__dirname, 'preload.js')
